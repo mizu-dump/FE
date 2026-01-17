@@ -1351,6 +1351,7 @@ local keywords = {
     "ban",
     "hammer",
     "deleted",
+	"meshpart",
     "deletehammer",
     "martillo"
 }
