@@ -1,16 +1,18 @@
 -----------------------
---[[ Name : God ]]--
+--[[ Script Name : Ban Hammer ]]--
 -------------------------------------------------------
---A script By makhail07
+--A script By @theycallmemiz
 
---Discord Creterisk#2958 
+--Discord : https://dsc.gg/mzzhub
 
---NOTE THIS SCRIPT WAS PURELY MADE FROM MY FUCKING IMAGINATION
+--NOTE THIS SCRIPT WAS PURELY MADE FROM MY IMAGINATION
 --IF IT HAPPENS TO LOOK LIKE ANOTHER SCRIPT
---DONT CALL IT A FUCKING BOOTLEG THANK YOU AND ENJOY THE SCRIPT
---YOU FUCKING SKIDS,
+--DONT CALL IT A BOOTLEG THANK YOU AND ENJOY THE SCRIPT
+--YOU SKIDS,
 --For Those who log/decompile this, If you sell or trade this,
 --and I find out who you are, i will take massive action.
+
+--FUNCTION CREDIT TO MOON CONVERT ;3 (oblige)
 -------------------------------------------------------
 
 loadstring(game:HttpGet("https://github.com/CatThatDrinksSprite/Moon-Convert/raw/main/Scripts/Other/LoadLibrary.lua", true))()
