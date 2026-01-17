@@ -1342,9 +1342,9 @@ end)
 
 
 
-if game.Players.LocalPlayer.Character:FindFirstChild("Accessory (BanhammerBack)") then
-  game.Players.LocalPlayer.Character["Accessory (BanhammerBack)"].Handle.AccessoryWeld:Destroy()
-  AlignCharacter(game.Players.LocalPlayer.Character["Accessory (BanhammerBack)"].Handle, game.Players.LocalPlayer.Character.Blob, Vector3.new(0, 0, -0.6), Vector3.new(0, 90, -15))
+if game.Players.LocalPlayer.Character:FindFirstChild("Accessory (HugeBan)") then
+  game.Players.LocalPlayer.Character["Accessory (HugeBan)"].Handle.AccessoryWeld:Destroy()
+  AlignCharacter(game.Players.LocalPlayer.Character["Accessory (HugeBan)"].Handle, game.Players.LocalPlayer.Character.Blob, Vector3.new(0, 0, -0.6), Vector3.new(0, 90, -15))
   for index, asset in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
     if asset:IsA("BasePart") then
         asset.Transparency = 1
