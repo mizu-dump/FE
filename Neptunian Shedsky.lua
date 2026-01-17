@@ -3,7 +3,7 @@ loadstring(game:HttpGet("https://github.com/CatThatDrinksSprite/Moon-Convert/raw
 loadstring(game:HttpGet("https://github.com/CatThatDrinksSprite/Moon-Convert/raw/main/Scripts/Other/sendNotification.lua", true))()
 
 if not isfile("ScriptBase/neptunian v.mp3") then
-	writefile("ScriptBase/neptunian v.mp3", game:HttpGet("https://github.com/CatThatDrinksSprite/Moon-Convert/raw/main/ScriptBase/neptunian%20v.mp3", true))
+	writefile("ScriptBase/neptunian v.mp3", game:HttpGet("https://github.com/mizu-dump/FE/raw/refs/heads/main/Music/Through%20Patches%20Of%20Violet.mp3", true))
 end
 
 --- Did actually rework heavily away from original neptunian, and the non-rework neptunian. -- NoobyGames12
