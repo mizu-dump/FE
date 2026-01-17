@@ -1342,16 +1342,62 @@ end)
 
 
 
-if game.Players.LocalPlayer.Character:FindFirstChild("Accessory (HugeBan)") then
-  game.Players.LocalPlayer.Character["Accessory (HugeBan)"].Handle.AccessoryWeld:Destroy()
-  AlignCharacter(game.Players.LocalPlayer.Character["Accessory (HugeBan)"].Handle, game.Players.LocalPlayer.Character.Blob, Vector3.new(0, 0, -0.6), Vector3.new(0, 90, -15))
-  for index, asset in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-    if asset:IsA("BasePart") then
-        asset.Transparency = 1
+local plr = game.Players.LocalPlayer
+local char = plr.Character or plr.CharacterAdded:Wait()
+
+-- keywords that identify ban hammer
+local keywords = {
+    "banhammer",
+    "ban",
+    "hammer",
+    "deleted",
+    "deletehammer",
+    "martillo"
+}
+
+-- find accessory (my part nigga "D)
+local function findBanHammer()
+    for _, v in ipairs(char:GetChildren()) do
+        if v:IsA("Accessory") then
+            local lname = string.lower(v.Name)
+            for _, k in ipairs(keywords) do
+                if string.find(lname, k) then
+                    return v
+                end
+            end
+        end
     end
-  end
+    return nil
+end
+
+local hammer = findBanHammer()
+
+if hammer and hammer:FindFirstChild("Handle") then
+    -- destroy weld
+    if hammer.Handle:FindFirstChild("AccessoryWeld") then
+        hammer.Handle.AccessoryWeld:Destroy()
+    end
+
+    -- align (credit to mist)
+    AlignCharacter(
+        hammer.Handle,
+        char.Blob,
+        Vector3.new(0, 0, -0.6),
+        Vector3.new(0, 90, -15)
+    )
+
+    -- hide character xD
+    for _, asset in pairs(char:GetChildren()) do
+        if asset:IsA("BasePart") then
+            asset.Transparency = 1
+        end
+    end
 else
-	sendNotification("Moon Convert", "It is recommended to wear the hats used for this script... You can get the hats by using \"get hats;ban hammer\"", 7)
+    sendNotification(
+        "Moon Convert",
+        "It is recommended to wear the hats used for this script... You can get the hats by using \"get hats;ban hammer\"",
+        7
+    )
 end
 
 -------------------------------------------------------
